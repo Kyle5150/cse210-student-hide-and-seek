@@ -10,12 +10,12 @@ class Hider:
     def get_hint(self):
 
         hint = "(^_^) Hello there!"
-        if self.distance[-1] == 0:
-            hint = "(;.;) You found me!"
         if self.distance[-1] > self.distance[-2]:
             hint = "(^.^) Getting colder!"
         if self.distance[-1] < self.distance[-2]:
             hint = "(>.<) Getting warmer!"
+        if self.distance[-1] == 0:
+            hint = "(;.;) You found me!"
         return hint
 
     def watch(self, location):
